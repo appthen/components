@@ -5,6 +5,7 @@ build
 dist
 site
 .tmp
+pnmp-lock.yaml
 es
 public/resources/meta.json
 packages/*/lib/
@@ -117,3 +118,6 @@ src/assets.container.json
 assets.json
 assets.container.json
 material-meta.json
+packages/ant-design/pnpm-lock.yaml
+packages/ant-design/pnpm-lock.yaml
+packages/ant-design/pnpm-lock.yaml
