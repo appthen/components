@@ -1,21 +1,21 @@
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
 import { ExtendComponentMetadata } from '../type';
 
-const AMeta: ExtendComponentMetadata = {
-  componentName: 'A',
-  title: '链接',
+const WithRouterMeta: ExtendComponentMetadata = {
+  componentName: 'WithRouter',
+  title: '路由包装器',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
   npm: {
     package: '@appthen/react',
     version: '0.0.5',
-    exportName: 'A',
+    exportName: 'withRouter',
     main: '',
     destructuring: true,
     subName: '',
   },
-  group: '原子组件',
+  group: '高级组件',
   category: '基础',
   icon: 'rqeh-1',
   configure: {
@@ -28,34 +28,24 @@ const AMeta: ExtendComponentMetadata = {
           componentName: 'ComponentHeaderSetter',
           props: {
             fastBind: {
-              inputField: 'children',
+              inputField: 'component',
             },
           },
         },
       },
       {
-        name: 'href',
-        title: '链接地址',
-        setter: 'StringSetter',
-        isRequired: true,
-      },
-      {
-        name: 'target',
-        title: '打开方式',
-        setter: {
-          componentName: 'SelectSetter',
-          props: {
-            options: [
-              { label: '当前窗口', value: '_self' },
-              { label: '新窗口', value: '_blank' },
-            ],
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'Component',
+            'zh-CN': '组件',
           },
         },
-      },
-      {
-        name: 'children',
-        setter: 'StringSetter',
-        title: '文本',
+        name: 'component',
+        setter: {
+          componentName: 'ComponentSetter',
+          isRequired: true,
+        },
       },
       {
         title: {
@@ -132,26 +122,35 @@ const AMeta: ExtendComponentMetadata = {
       className: true
     },
     component: {
-      isContainer: false,
+      isContainer: true,
+      nestingRule: {
+        childWhitelist: ['*'],
+      },
     },
   },
 };
 
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: '链接',
+    title: '路由包装器',
     screenshot: '',
     schema: {
-      componentName: 'A',
-      props: {
-        href: 'https://example.com',
-        children: '链接文本',
-      },
+      componentName: 'WithRouter',
+      props: {},
+      children: [
+        {
+          componentName: 'Link',
+          props: {
+            to: '/example',
+            children: '路由包装的组件',
+          },
+        },
+      ],
     },
   },
 ];
 
 export default {
-  ...AMeta,
+  ...WithRouterMeta,
   snippets,
 }; 

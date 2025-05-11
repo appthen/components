@@ -68,4 +68,6 @@ export { default as A } from './components/base/A';
 
 export { default as Link } from './components/base/Link';
 
+export { default as Iframe } from './components/base/Iframe';
+
 configure({ isolateGlobalState: true });

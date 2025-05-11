@@ -1,16 +1,16 @@
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
 import { ExtendComponentMetadata } from '../type';
 
-const AMeta: ExtendComponentMetadata = {
-  componentName: 'A',
-  title: '链接',
+const IframeMeta: ExtendComponentMetadata = {
+  componentName: 'Iframe',
+  title: '内嵌框架',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
   npm: {
     package: '@appthen/react',
     version: '0.0.5',
-    exportName: 'A',
+    exportName: 'Iframe',
     main: '',
     destructuring: true,
     subName: '',
@@ -28,34 +28,36 @@ const AMeta: ExtendComponentMetadata = {
           componentName: 'ComponentHeaderSetter',
           props: {
             fastBind: {
-              inputField: 'children',
+              inputField: 'src',
             },
           },
         },
       },
       {
-        name: 'href',
-        title: '链接地址',
+        name: 'src',
         setter: 'StringSetter',
+        title: '链接地址',
         isRequired: true,
       },
       {
-        name: 'target',
-        title: '打开方式',
-        setter: {
-          componentName: 'SelectSetter',
-          props: {
-            options: [
-              { label: '当前窗口', value: '_self' },
-              { label: '新窗口', value: '_blank' },
-            ],
-          },
-        },
+        name: 'width',
+        setter: 'StringSetter',
+        title: '宽度',
       },
       {
-        name: 'children',
+        name: 'height',
         setter: 'StringSetter',
-        title: '文本',
+        title: '高度',
+      },
+      {
+        name: 'allow',
+        setter: 'StringSetter',
+        title: '允许的权限',
+      },
+      {
+        name: 'sandbox',
+        setter: 'StringSetter',
+        title: '沙箱模式',
       },
       {
         title: {
@@ -71,7 +73,7 @@ const AMeta: ExtendComponentMetadata = {
         setter: {
           componentName: 'StyleSetter',
           props: {
-            showModuleList: ['font', 'layout', 'position'],
+            showModuleList: ['layout', 'position'],
           }
         },
       },
@@ -139,19 +141,20 @@ const AMeta: ExtendComponentMetadata = {
 
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: '链接',
+    title: '内嵌框架',
     screenshot: '',
     schema: {
-      componentName: 'A',
+      componentName: 'Iframe',
       props: {
-        href: 'https://example.com',
-        children: '链接文本',
+        src: 'https://www.appthen.com',
+        width: '100%',
+        height: '500px',
       },
     },
   },
 ];
 
 export default {
-  ...AMeta,
+  ...IframeMeta,
   snippets,
 }; 
