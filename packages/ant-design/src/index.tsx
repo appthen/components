@@ -90,6 +90,7 @@ export { Tour } from 'antd';
 
 export { Segmented } from 'antd';
 
+export { Splitter } from 'antd';
 
 export { default as Skeleton } from './components/skeleton';
 

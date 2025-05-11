@@ -67,8 +67,8 @@ module.exports = {
                 version: '5.14.0',
                 urls: [
                   'https://cdn.appthen.com/editor/antd/5.14.0/dayjs.min.js',
-                  `https://cdn.appthen.com/editor/antd/5.14.0/antd5.20/antd.min.js`,
-                  `https://cdn.appthen.com/editor/antd/5.14.0/antd5.20/reset.min.css`,
+                  `https://cdn.appthen.com/editor/antd/5.22.7/antd.min.js`,
+                  `https://cdn.appthen.com/editor/antd/5.22.7/reset.min.css`,
                 ],
                 library: 'antd',
               },

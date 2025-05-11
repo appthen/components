@@ -6,8 +6,10 @@
   "scripts": {
     "start": "npm run dumi",
     "build": "vite build",
-    "lowcode:dev": "vite --config ./vite.lowcode.config.ts",
-    "lowcode:build": "vite build --config ./vite.lowcode.config.ts",
+
+    "lowcode:dev": "NODE_OPTIONS=--openssl-legacy-provider build-scripts start --config ./build.lowcode.js --port 5551",
+    "lowcode:build": "NODE_OPTIONS=--openssl-legacy-provider build-scripts build --config ./build.lowcode.js",
+   
     "f2elint-scan": "f2elint scan",
     "f2elint-fix": "f2elint fix",
     "dumi": "cross-env APP_ROOT=docs dumi dev",
@@ -70,7 +72,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "@babel/runtime": "^7.0.0",
-    "antd": "^5.20.0",
+    "antd": "^5.24.4",
     "antd-img-crop": "4.22.0",
     "antd-style": "3.6.2",
     "dayjs": "1.11.12"
