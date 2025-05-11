@@ -15,7 +15,7 @@ export default props => {
   const content = () => {
     return props?.content
   }
-
+  console.log('props: ', props);
   return (
     <ProConfigProvider dark={props?.dark}>
       <ProLayout

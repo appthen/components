@@ -12,45 +12,9 @@ import { portalRef } from './components/root-portal/auto-portal';
 
 export { default as AtAvatar } from './components/avatar';
 export { default as AtBadge } from './components/badge';
-// export { default as AtDrawer } from './components/drawer'
-// export { default as AtFloatLayout } from './components/float-layout'
-// export { default as AtForm } from './components/form'
-// export { default as AtGrid } from './components/grid'
 export { default as AtIcon } from './components/icon';
-// export { default as AtInput } from './components/input'
-// export { default as AtList } from './components/list'
-// export { default as AtListItem } from './components/list/item'
-// export { default as AtModal } from './components/modal'
-// export { default as AtModalHeader } from './components/modal/header'
-// export { default as AtModalContent } from './components/modal/content'
-// export { default as AtModalAction } from './components/modal/action'
-// export { default as AtNavBar } from './components/nav-bar'
 export { default as AtNoticebar } from './components/noticebar';
-// export { default as AtPagination } from './components/pagination'
-// export { default as AtProgress } from './components/progress'
-// export { default as AtSegmentedControl } from './components/segmented-control'
-// export { default as AtTabBar } from './components/tab-bar'
-// export { default as AtTabs } from './components/tabs'
-// export { default as AtTabsPane } from './components/tabs-pane'
 export { default as AtTag } from './components/tag';
-// export { default as AtTextarea } from './components/textarea'
-// export { default as AtTimeline } from './components/timeline'
-// export { default as AtToast } from './components/toast'
-// export { default as AtAccordion } from './components/accordion'
-// export { default as AtSwipeAction } from './components/swipe-action'
-// export { default as AtLoadMore } from './components/load-more'
-// export { default as AtCountdown } from './components/countdown'
-// export { default as AtSteps } from './components/steps'
-// export { default as AtCurtain } from './components/curtain'
-// export { default as AtMessage } from './components/message'
-// export { default as AtImagePicker } from './components/image-picker'
-// export { default as AtRange } from './components/range'
-// export { default as AtIndexes } from './components/indexes'
-// export { default as AtFab } from './components/fab'
-
-/* 私有的组件  */
-// export { default as AtLoading } from './components/loading'
-// export { default as AtComponent } from './common/component'
 
 export { default as Text } from './components/base/Text';
 export { default as Image } from './components/base/Image';
@@ -87,8 +51,21 @@ export const getComponent = (componentName: string) => {
   return PartalComponent;
 };
 
-// export { event } from './utils/event';
-
 export { default as withRouter } from './components/react-router/withRouter';
+
+export { default as H1 } from './components/base/H1';
+export { default as H2 } from './components/base/H2';
+export { default as H3 } from './components/base/H3';
+export { default as P } from './components/base/P';
+export { default as Ul } from './components/base/Ul';
+export { default as Li } from './components/base/Li';
+
+export { default as Strong } from './components/base/Strong';
+export { default as Em } from './components/base/Em';
+export { default as Br } from './components/base/Br';
+
+export { default as A } from './components/base/A';
+
+export { default as Link } from './components/base/Link';
 
 configure({ isolateGlobalState: true });

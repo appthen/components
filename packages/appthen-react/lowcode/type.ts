@@ -18,7 +18,7 @@ interface IActionCase {
 }
 
 export interface ExtendComponentMetadata extends IPublicTypeComponentMetadata {
-  hideInProjectType: string[];
+  hideInProjectType?: string[];
 }
 
 declare module '@alilc/lowcode-types' {

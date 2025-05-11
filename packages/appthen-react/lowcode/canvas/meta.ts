@@ -16,7 +16,7 @@ const CanvasMeta: IPublicTypeComponentMetadata = {
   },
   group: '原子组件',
   category: '展示',
-  icon: 'rqeliebiao',
+  icon: 'rqecanvas',
   configure: {
     props: [
       {

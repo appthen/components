@@ -8,7 +8,8 @@
     "build": "vite build && tsc -d --skipLibCheck --emitDeclarationOnly --jsx react --esModuleInterop --declarationDir dist src/index.ts",
     "lowcode:dev": "NODE_OPTIONS=--openssl-legacy-provider build-scripts start --config ./build.lowcode.js --port 5551",
     "lowcode:build": "NODE_OPTIONS=--openssl-legacy-provider build-scripts build --config ./build.lowcode.js",
-    "pub": "npm publish --access public --registry https://registry.npmjs.org && cnpm sync @appthen/antd-pro"
+    "pub": "npm publish --access public --registry https://registry.npmjs.org && cnpm sync @appthen/antd-pro",
+    "postinstall": "rm -rf node_modules/node-sass"
   },
   "files": [
     "es/",
@@ -27,9 +28,9 @@
   "devDependencies": {
     "@alib/build-scripts": "^0.1.3",
     "@alifd/build-plugin-lowcode": "^0.4.7",
-    "build-plugin-component-multiple": "^1.0.1-beta.1",
-    "@alilc/lowcode-react-renderer": "^1.2.3",
-    "@alilc/lowcode-utils": "^1.2.3",
+    "build-plugin-component-multiple": "^1.0.0-beta.53",
+    "@alilc/lowcode-react-renderer": "^1.3.4",
+    "@alilc/lowcode-utils": "^1.3.4",
     "style-loader": "^1.3.0",
     "css-loader": "^5.2.7",
     "antd": "^5.14.0",
@@ -44,10 +45,10 @@
     "@vitejs/plugin-react": "^4.2.1",
     "@types/node": "^18.0.0",
     "sass": "^1.71.1",
-    "sass-loader": "^14.1.1",
+    "sass-loader": "10.2.0",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
-    "swr": "^2.2.5"
+    "swr": "2.2.5"
   },
   "dependencies": {
     "@ant-design/pro-components": "^2.6.49",
@@ -69,8 +70,10 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "node-sass": "npm:sass@^1.71.1",
-    "css-loader": "^5.2.7",
-    "swr": "^2.2.5"
+    "css-loader": "5.2.7",
+    "swr": "^2.2.5",
+    "sass-loader": "10.2.0",
+    "style-loader": "1.3.0"
   },
   "registry": "https://registry.npmjs.org/",
   "gitHead": "eea735f466b0184f3a4be074574e5668f0908b06",
@@ -91,5 +94,11 @@
   },
   "lcMeta": {
     "type": "component"
+  },
+  "pnpm": {
+    "overrides": {
+      "swr": "2.2.5",
+      "node-sass": "npm:sass@^1.71.1"
+    }
   }
 }
